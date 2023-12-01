@@ -14,7 +14,7 @@ import os
 dir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(dir, 'cookie.env'))
 AOC_COOKIE = os.getenv("AOC_COOKIE")
-YEAR = '2022'
+YEAR = '2023'
 
 def get_input(day):
     req = requests.get(f'https://adventofcode.com/{YEAR}/day/{day}/input', 
@@ -53,13 +53,3 @@ def submit(day, level, answer):
         print('VERDICT : ALREADY SOLVED')
     else:
         print('VERDICT : OK !')
-
-DAY = 3
-PART = 1
-s = get_input(DAY) # the daily input is stored in s
-print(s[-1])
-
-#ans = 123
-
-#
-#submit(DAY, PART, ans)
