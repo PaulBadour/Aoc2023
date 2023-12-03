@@ -24,7 +24,7 @@ def get_input(day):
 def get_example(day,offset=0):
     req = requests.get(f'https://adventofcode.com/{YEAR}/day/{day}',
                        headers={'cookie':'session='+AOC_COOKIE})
-    return req.text.split('<pre><code>')[offset+1].split('</code></pre>')[0]
+    return req.text.split('<pre><code>')[offset+1].split('</code></pre>')[0].split('\n')[:-1]
 
 def submit(day, level, answer):
     print(f'You are about to submit the follwing answer:')
